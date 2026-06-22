@@ -19,6 +19,7 @@ app.post('/usuarios', (req, res) => {
         [nome, email, senha],
         (erro, resultado) => {
             if (erro) {
+                console.log(erro)
                 return res.status(500).json({
                     mensagem: 'Erro ao cadastrar usuário',
                 });

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import{ View, Text, TextInput, TouchableOpacity, 
-    styleSheet, Alert } from 'react-native';
+    StyleSheet, Alert } from 'react-native';
 
 export default function Cadastro({navigation}) {
 
@@ -31,6 +31,36 @@ export default function Cadastro({navigation}) {
         Alert.alert('Erro ao cadastrar usuário');
     }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'center'
+  },
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20
+  },
+  input: {
+    borderWidth: 1,
+    marginBottom: 10,
+    padding: 10,
+    borderRadius: 5
+  },
+  botao: {
+    backgroundColor: '#007AFF',
+    padding: 12,
+    marginTop: 10,
+    borderRadius: 5
+  },
+  textoBotao: {
+    color: '#fff',
+    textAlign: 'center'
+  }
+});
+
 
 return (
 <View style={styles.container}>
@@ -68,6 +98,5 @@ return (
 
 
 )
-
 
 }
