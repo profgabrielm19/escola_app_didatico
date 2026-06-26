@@ -32,6 +32,34 @@ app.post('/usuarios', (req, res) => {
 });
 
 
+app.get('/usuarios', (req, res) => {
+    const sql = "SELECT * FROM usuarios";
+
+    conexao.query(sql, (erro, resultado) => {
+        if (erro) {
+            console.log(erro)
+            return res.status(500).json({
+                mensagem: 'Erro ao buscar usuários',
+            });
+        }
+        res.json(resultado);
+    })
+});
+
+app.get('/usuarios', (req, res) => {
+    const sql = 'SELECT * FROM usuarios';
+
+    conexao.query(sql, (erro, resultado) => {
+        if (erro) {
+            console.log(erro)
+            return res.status(500).json({
+                mensagem: 'Erro ao buscar usuários',
+            });
+        }
+        res.json(resultado);
+    });
+});
+
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
 });
