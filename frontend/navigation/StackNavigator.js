@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Cadastro from '../screens/cadastro';
+import listaUsuarios from '../screens/listaUsuarios';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,15 @@ export default function StackNavigator() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Cadastro" component={Cadastro} />
+
+        <Stack.Screen name="listaUsuarios" 
+        component={listaUsuarios} />
+      
       </Stack.Navigator>
+      
+     
+
+
     </NavigationContainer>
 
 );

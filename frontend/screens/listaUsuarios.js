@@ -3,7 +3,7 @@ import { useState} from 'react';
 import { View, Text, TouchableOpacity, 
     StyleSheet, ScrollView} from 'react-native';
 
-export default function ListaUsuarios(){
+export default function listaUsuarios(){
     const [usuarios, setUsuarios] = useState([]);
 
     async function buscarUsuarios() {

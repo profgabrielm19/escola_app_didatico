@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   textoBotao: {
-    color: '#fff',
+    color: '#000',
     textAlign: 'center'
   }
 });
@@ -90,7 +90,7 @@ return (
         <Text style={styles.textoBotao}>Cadastrar</Text>
     </TouchableOpacity>
 
-    <TouchableOpacity onPress={() => navigation.navigate('ListaUsuarios')}>
+    <TouchableOpacity onPress={() => navigation.navigate('listaUsuarios')}>
         <Text style={styles.textoBotao}>Ver Lista de Usuários</Text>
     </TouchableOpacity>
 
